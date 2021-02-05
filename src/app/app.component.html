@@ -1,0 +1,20 @@
+  <!-- Include a medblocks component -->
+  <section class="section">
+    <h1 class="title">Example component</h1>
+    <div class="columns">
+      <div class="column is-half">
+        <!-- Medblocks UI component -->
+        <mui-composition 
+          [template]="settings.template" 
+          [configuration]="settings.configuration" 
+          [readOnly]="settings.readOnly"
+          (change)="handleChange($event)"
+          (done)="handleDone($event)"
+          >
+        </mui-composition>
+      </div>
+      <div class="column is-half">
+        <pre>{{currentValue | json}}</pre>
+      </div>
+    </div>
+  </section>
